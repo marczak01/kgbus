@@ -1,0 +1,133 @@
+.about {
+  grid-column: full-start/full-end;
+  background-color: #111111;
+  background-image: linear-gradient(
+    to right,
+    rgba(196, 12, 12, 0.749) 0%,
+    rgba(196, 12, 12, 0.75) 35%,
+    rgb(17, 17, 17) 35%
+  );
+  margin: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rem 0 5rem 0;
+  // height: 60rem;
+  scroll-margin-top: 5rem;
+
+  @media only screen and (max-width: $bp-large2) {
+    background-image: none;
+    padding-top: 5rem;
+    margin: 0 4rem;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @media only screen and (max-width: $bp-large2) {
+      flex-direction: column-reverse;
+    }
+    &-left {
+      flex: 0 0 45%;
+      outline: 3px solid #111111;
+      outline-offset: 1rem;
+      margin-left: 3rem;
+      position: relative;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+        flex: 0;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(0, 0, 0, 0.3) 100%
+        );
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    &-right {
+      // flex: 0 0 55%;
+      margin-right: 5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
+
+      p {
+        @media only screen and (max-width: $bp-smaller) {
+          font-size: 1.5rem;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: end;
+    gap: 3rem;
+    margin-top: 4rem;
+    margin-right: 4rem;
+
+    @media only screen and (max-width: $bp-large) {
+      justify-content: end;
+    }
+
+    @media only screen and (max-width: $bp-large2) {
+      justify-content: center;
+      margin: 3rem 0 0 0;
+    }
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      p {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        @media only screen and (max-width: $bp-smaller) {
+          font-size: 1rem;
+        }
+      }
+      &--icon {
+        font-size: 3rem;
+        color: rgba(196, 12, 12, 0.749);
+
+        @media only screen and (max-width: $bp-smaller) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  &__tekst {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: 3rem;
+    }
+  }
+}

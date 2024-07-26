@@ -1,0 +1,78 @@
+.map {
+  grid-column: full-start/full-end;
+  background-color: #fff;
+  padding: 8rem 0 10rem 0;
+  color: #111;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding-bottom: 0;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    padding-top: 4rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
+  &__left {
+    padding: 5rem;
+    flex: 45%;
+    @media only screen and (max-width: $bp-medium) {
+      padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding-right: 1rem;
+    }
+
+    &-text {
+      h2 {
+        text-transform: uppercase;
+        span {
+          border-bottom: 3px solid #f00808e2;
+          padding-left: 5rem;
+          margin-left: -5rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+          font-size: 3.5rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 2.5rem;
+        }
+      }
+      p {
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        line-height: 1.4;
+
+        @media only screen and (max-width: $bp-medium) {
+          font-size: 1.7rem;
+          line-height: 1.5;
+          margin-top: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  &__right {
+    flex: 55%;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding-right: 0.5rem;
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
