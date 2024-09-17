@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <title>Kg-bus</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__bottom">
+          <nav class="nav">
+            <ul class="nav__list">
+              <a class="nav__list-link" href="#about"><li>{% trans "O FIRMIE" %}</li></a>
+              <a class="nav__list-link" href="#lotnisko"
+                ><li>{% trans "TRANSFERY LOTNISKO" %}</li></a
+              >
+              <a class="nav__list-link" href="#biznes"
+                ><li>{% trans "PRZEWOZY BIZNESOWE" %}</li></a
+              >
+            </ul>
+          </nav>
+          <div class="header__lg">
+          <a href="#hero"><img class="header__logo" src="{% static '/img/logo.png' %}" /></a>
+          {% get_current_language as LANGUAGE_CODE %}
+          {% get_available_languages as LANGUAGES %}
+          {% get_language_info_list for LANGUAGES as languages %}
+            <ul class="languages">
+              {% for language in languages %}
+              <li>
+                <a href="/{{ language.code }}/home/"{% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                  <img src="/static/img/flag:{{ language.code }}.png">
+                  <!-- {{ language.code }}  -->
+                </a>
+              </li> 
+              {% endfor %} 
+            </ul>
+          </div>
+          <nav class="nav">
+            <ul class="nav__list nav__list-align">
+              <a class="nav__list-link" href="#door"><li>{% trans "DOOR TO DOOR" %}</li></a>
+              <a class="nav__list-link" href="#wycieczki"><li>{% trans "WYCIECZKI" %}</li></a>
+              <a class="nav__list-link" href="#prom"
+                ><li>{% trans "TRANSFERY PROMOWE" %}</li></a
+              >
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section id="hero" class="hero">
+        <div class="hero__left">
+          <img class="hero__left-img" src="{% static "/img/przod1.jpeg" %}" />
+        </div>
+        <div class="hero__right">
+          <div class="hero__right-box">
+            <h1 class="hero__right-title">
+              <span class="hero__right-title--big anim anim1">{% trans "KOMFORT" %}</span>
+              <span class="hero__right-title--big anim anim2">{% trans "WYGODA" %}</span>
+              <span class="hero__right-title--big anim anim3"
+                >{% trans "BEZPIECZEŃSTWO" %}</span
+              >
+              <span class="hero__right-title--small"
+                >{% trans "podczas podróży są dla" %}
+                <span class="hero__right-break">{% trans "nas najważniejsze" %}</span>
+              </span>
+            </h1>
+          </div>
+
+          <div class="hero__right-bottom">
+            <a href="#kontakt"><button>{% trans "KONTAKT" %}</button></a>
+            <div class="hero__right-bottom--tel">
+              <ion-icon class="hero__icon" name="call"></ion-icon>
+              <a href="tel:+48 511 289 100">+48 511 289 100</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="about__box">
+          <div class="about__box-left">
+            <img src="{% static "/img/hero3.jpeg" %}" />
+          </div>
+          <div class="about__box-right">
+            <h2 class="heading2 about__tekst">{% trans "O FIRMIE" %}</h2>
+
+            <p class="paragraph">
+              {% blocktrans %} 
+              Na rynku turystyczno - przewozowym jesteśmy znani z profesjonalnej
+              obsługi, komfortu naszych busów i miłej atmosfery panującej
+              podczas podróży. Zaufanie i zadowolenie naszych klientów jest dla
+              nas najważniejsze. Wykonujemy przewozy indywidualne i
+              okolicznościowe na terenie całej Europy. <br /><br />Prowadzimy
+              także indywidualne, czarterowe przewozy na lotniska Busem Mercedes
+              KLASY V, który może zabrać jednorazowo do 7 pasażerów.
+              {% endblocktrans %}
+            </p>
+          </div>
+        </div>
+
+        <div class="about__icons">
+          <div class="about__icons-box">
+            <ion-icon class="about__icons-box--icon" name="alarm"></ion-icon>
+            <p>{% trans "punktualność" %}</p>
+          </div>
+          <div class="about__icons-box">
+            <ion-icon
+              class="about__icons-box--icon"
+              name="car-sport"></ion-icon>
+            <p>{% trans "wygoda" %}</p>
+          </div>
+          <div class="about__icons-box">
+            <ion-icon
+              class="about__icons-box--icon"
+              name="speedometer"></ion-icon>
+            <p>{% trans "bezpieczeństwo" %}</p>
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="services__container">
+          <div class="services__box services__box-start">
+            <div id="lotnisko" class="services__box-left">
+              <h3 class="heading-3">{% trans "Transfery lotnisko" %}</h3>
+              <p>
+                {% blocktrans %}LOTNISKO TRANSFERY TEKST{% endblocktrans %}
+              </p>
+            </div>
+            <div class="services__box-photo services__box-photo--1"></div>
+          </div>
+          <div class="services__box services__box-end">
+            <div class="services__box-photo services__box-photo--2"></div>
+
+            <div
+              id="biznes"
+              class="services__box-left services__box-left--trans">
+              <h3 class="heading-3">{% trans "Przewozy biznesowe" %}</h3>
+              <p>
+                {% blocktrans %}PRZEWOZY BIZNES TEKST{% endblocktrans %}
+              </p>
+            </div>
+          </div>
+          <div class="services__box services__box-start">
+            <div class="services__box-left" id="door">
+              <h3 class="heading-3">{% trans "Door to door" %}</h3>
+              <p>
+                {% blocktrans %}DOOR DOOR TEKST{% endblocktrans %}
+              </p>
+            </div>
+            <div class="services__box-photo services__box-photo--3"></div>
+          </div>
+          <div class="services__box services__box-end">
+            <div class="services__box-photo services__box-photo--4"></div>
+
+            <div
+              id="wycieczki"
+              class="services__box-left services__box-left--trans">
+              <h3 class="heading-3">{% trans "Wycieczki" %}</h3>
+              <p>
+                {% trans "Oferujemy połączoną z przwozem gości usługę private guidingu w języku angielskim oraz niemieckim, zapewniając poznanie okolicy, atrakcji turystycznych Pomorza i ciekawe spędzanie wolnego czasu." %}
+              </p>
+            </div>
+          </div>
+          <div class="services__box services__box-start">
+            <div id="prom" class="services__box-left">
+              <h3 class="heading-3">{% trans "Transfery promowe" %}</h3>
+              <p>
+                {% blocktrans %}
+                  Promowe transfery
+                {% endblocktrans %}
+              </p>
+            </div>
+            <div class="services__box-photo services__box-photo--5"></div>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div class="map__left">
+          <div class="map__left-text">
+            <h2 class="heading2">
+              <span>{% trans "Podróżuj" %}</span><br />
+              {% trans "z nami" %}
+            </h2>
+            <p>
+             {% blocktrans %} Działamy na rynku kołobrzeskim oraz w promieniu do 100 km
+              realizując przewozy gości w różnych kierunkach w Polsce,
+              Skandynawii, Niemczech i innych krajach Europy.
+              {% endblocktrans %}
+            </p>
+          </div>
+        </div>
+        <div class="map__right">
+          <img class="map__right-img" src="{% static "/img/mapa4.png" %}" />
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="gallery__box">
+          <div class="gallery__box-photo gallery__box-photo--1">
+            <img src="{% static "/img/gallery/bok22.jpeg" %}" />
+          </div>
+          <div class="gallery__box-photo gallery__box-photo--2">
+            <img src="{% static "/img/gallery/bok1.jpeg" %}" />
+          </div>
+          <div class="gallery__box-photo gallery__box-photo--3">
+            <img src="{% static "/img/gallery/srodek44.jpeg" %}" />
+          </div>
+          <div class="gallery__box-photo gallery__box-photo--4">
+            <img src="{% static "/img/gallery/srodek22.jpeg" %}" />
+          </div>
+          <div class="gallery__box-photo gallery__box-photo--5">
+            <img src="{% static "/img/gallery/srodek33.jpeg" %}" />
+          </div>
+          <!-- <div class="gallery__box-photo gallery__box-photo--6">
+            <img src="/img/gallery/srodek4.jpeg" />
+          </div> -->
+          <div class="gallery__box-photo gallery__box-photo--7">
+            <img src="{% static "/img/gallery/tyl1.jpeg" %}" />
+          </div>
+        </div>
+      </section>
+      <section id="kontakt" class="footer">
+        <div class="footer__boxes">
+          <div class="footer__boxes-left">
+            <div class="footer__title">
+              <h3 class="heading2">{% trans "adres" %}</h3>
+            </div>
+            <ul class="footer__boxes-left--list">
+              <li>SKTravel Sp. Z o.o.</li>
+              <li>
+                <span class="footer__boxes-left--list--col">NIP</span>
+                671-183-83-33
+              </li>
+              <li>ul. Grochowska 5d/7</li>
+              <li>
+                <span class="footer__boxes-left--list--col">REGON</span>
+                383284390
+              </li>
+              <li>78-100 Kołobrzeg</li>
+              <li>
+                <span class="footer__boxes-left--list--col">KRS</span>
+                0000785064
+              </li>
+            </ul>
+            <a href="tel:+48511289100" class="footer__phone">+48 511 289 100</a>
+
+            <div class="footer__boxes-left-icons">
+              <ion-icon
+                class="footer__boxes-left-icons--icon"
+                name="logo-facebook"></ion-icon>
+              <ion-icon
+                class="footer__boxes-left-icons--icon"
+                name="logo-instagram"></ion-icon>
+            </div>
+          </div>
+          <div class="footer__boxes-right">
+            <p>{% trans "Skontaktuj się z nami" %}</p>
+            <form method="POST" class="footer__boxes-right--form">
+              {% csrf_token %}
+              <div class="footer__boxes-right--form-top">
+                {{ form.name }}
+                {{ form.email }}
+              </div>
+              {{ form.phone }}
+              {{ form.message }}
+              <!-- <div class="footer__boxes-right--form-top">
+                <input
+                  class="input form-top--item"
+                  type="text"
+                  placeholder="{% trans "IMIĘ I NAZWISKO" %}"
+                  required />
+                <input
+                  class="input form-top--item"
+                  type="email"
+                  placeholder="EMAIL"
+                  required />
+              </div>
+              <input
+                class="input input-block"
+                type="tel"
+                placeholder="{% trans "NUMER TELEFONU" %}"
+                required />
+              <textarea
+                class="input input-block"
+                placeholder=" {% trans "WIADOMOŚĆ" %}"
+                rows="5"
+                required></textarea> -->
+              <input class="btn" type="submit" value="{% trans "WYŚLIJ" %}" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      function showMenu(){
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block"){
+          x.style.display = "none";
+        } else{
+          x.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

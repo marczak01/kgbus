@@ -1,0 +1,25 @@
+{
+  "name": "kgbus",
+  "version": "1.0.0",
+  "description": "kgbus webpage",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss kgbus/static/css/main.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss kgbus/static/css/main.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' kgbus/static/css/main.comp.css -o kgbus/static/css/main.prefix.css",
+    "compress:css": "node-sass kgbus/static/css/main.prefix.css kgbus/static/css/main.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Patrycja",
+  "license": "ISC",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "autoprefixer": "^10.4.17",
+    "live-server": "^1.2.2",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.0"
+  }
+}

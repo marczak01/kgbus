@@ -1,0 +1,77 @@
+$color-gray: #111;
+$color-gray-2: rgba(34, 34, 34, 0.961);
+
+$bp-largest: 69em; //1104px
+$bp-large: 66.25em; //1060px
+$bp-large2: 57.5em; // 920px
+$bp-medium: 54.375em; // 820px
+$bp-medium2: 47.5em; //760px
+$bp-small: 38.75em; //620px
+$bp-smaller: 32.5em; //520px
+$bp-tel: 26.87em; //430px
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #111;
+  color: #fff;
+  font-weight: 300;
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(3rem, 1fr) [center-start]repeat(
+      12,
+      [col-start] minmax(min-content, 12rem) [col-end]
+    )
+    [center-end] minmax(3rem, 1fr) [full-end];
+  grid-template-rows: min-content min-content;
+
+  @media only screen and (max-width: $bp-large) {
+    // grid-template-rows: min-content 90vh min-content;
+  }
+}
+
+.heading2 {
+  font-size: 6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.heading-3 {
+  font-size: 2rem;
+  color: #111;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.paragraph {
+  font-size: 2rem;
+  line-height: 1.5;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 1.8rem;
+  }
+}
+
+.title-services {
+  text-align: center;
+  margin-bottom: 6rem;
+}

@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-24 08:35+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: main/forms.py:9 main/templates/main/index.html:301
+msgid "WIADOMOŚĆ"
+msgstr "NACHRICHT"
+
+#: main/templates/main/index.html:31 main/templates/main/index.html:102
+msgid "O FIRMIE"
+msgstr "ÜBER UNS"
+
+#: main/templates/main/index.html:33
+msgid "TRANSFERY LOTNISKO"
+msgstr "FLUGHAFENTRANSFER"
+
+#: main/templates/main/index.html:36
+msgid "PRZEWOZY BIZNESOWE"
+msgstr "GESCHÄFTSTRANSPORT"
+
+#: main/templates/main/index.html:58
+msgid "DOOR TO DOOR"
+msgstr "DOOR TO DOOR"
+
+#: main/templates/main/index.html:59
+msgid "WYCIECZKI"
+msgstr "REISEN"
+
+#: main/templates/main/index.html:61
+msgid "TRANSFERY PROMOWE"
+msgstr "FÄHRTRANSFER"
+
+#: main/templates/main/index.html:74
+msgid "KOMFORT"
+msgstr "KOMFORT"
+
+#: main/templates/main/index.html:75
+msgid "WYGODA"
+msgstr "BEQUEMLICHKEIT"
+
+#: main/templates/main/index.html:77
+msgid "BEZPIECZEŃSTWO"
+msgstr "SICHERHEIT"
+
+#: main/templates/main/index.html:80
+msgid "podczas podróży są dla"
+msgstr "BEIM REISEN stehen für uns"
+
+#: main/templates/main/index.html:81
+msgid "nas najważniejsze"
+msgstr "an erster Stelle"
+
+#: main/templates/main/index.html:87
+msgid "KONTAKT"
+msgstr "KONTAKT"
+
+#: main/templates/main/index.html:105
+msgid ""
+" \n"
+"              Na rynku turystyczno - przewozowym jesteśmy znani z "
+"profesjonalnej\n"
+"              obsługi, komfortu naszych busów i miłej atmosfery panującej\n"
+"              podczas podróży. Zaufanie i zadowolenie naszych klientów jest "
+"dla\n"
+"              nas najważniejsze. Wykonujemy przewozy indywidualne i\n"
+"              okolicznościowe na terenie całej Europy. <br /><br /"
+">Prowadzimy\n"
+"              także indywidualne, czarterowe przewozy na lotniska Busem "
+"Mercedes\n"
+"              KLASY V, który może zabrać jednorazowo do 7 pasażerów.\n"
+"              "
+msgstr ""
+"Auf dem Tourismus- und Transportmarkt sind wir für unseren professionellen "
+"Service, den Komfort unserer Busse und die angenehme Atmosphäre während der "
+"Reise bekannt. Das Vertrauen und die Zufriedenheit unserer Gäste ist uns am "
+"Wichtigstem. Wir bieten individuelle Transport und Sondertransport in ganz "
+"Europa an. Wir bieten auch individuelle Chartertransporte zu Flughäfen mit "
+"einem Mercedes V-KLASSE-Bus an, der bis zu 7 Personnen gleichzeitig "
+"befördern kann."
+
+#: main/templates/main/index.html:121
+msgid "punktualność"
+msgstr "Pünktlichkeit"
+
+#: main/templates/main/index.html:127
+msgid "wygoda"
+msgstr "Komfort"
+
+#: main/templates/main/index.html:133
+msgid "bezpieczeństwo"
+msgstr "Sicherheit"
+
+#: main/templates/main/index.html:141
+msgid "Transfery lotnisko"
+msgstr "Flughafentransfer"
+
+#: main/templates/main/index.html:143
+msgid "LOTNISKO TRANSFERY TEKST"
+msgstr ""
+
+#: main/templates/main/index.html:154
+msgid "Przewozy biznesowe"
+msgstr "Geschäftstransport"
+
+#: main/templates/main/index.html:156
+msgid "PRZEWOZY BIZNES TEKST"
+msgstr ""
+
+#: main/templates/main/index.html:162
+msgid "Door to door"
+msgstr "Door to door"
+
+#: main/templates/main/index.html:164
+msgid "DOOR DOOR TEKST"
+msgstr ""
+
+#: main/templates/main/index.html:175
+msgid "Wycieczki"
+msgstr "Reisen"
+
+#: main/templates/main/index.html:177
+msgid ""
+"Oferujemy połączoną z przwozem gości usługę private guidingu w języku "
+"angielskim oraz niemieckim, zapewniając poznanie okolicy, atrakcji "
+"turystycznych Pomorza i ciekawe spędzanie wolnego czasu."
+msgstr ""
+"Wir bieten auch einen private guiding Service in Englisch und Deutsch in "
+"Kombination mit der Beförderung der Gäste an, um sicherzustellen, dass Sie "
+"die Gegend und die Sehenswürdigkeiten Pommerns kennenlernen und Ihre "
+"Freizeit auf interessante Weise verbringen."
+
+#: main/templates/main/index.html:183
+msgid "Transfery promowe"
+msgstr "Fährtransfers"
+
+#: main/templates/main/index.html:185
+msgid ""
+"\n"
+"                  Promowe transfery\n"
+"                "
+msgstr ""
+
+#: main/templates/main/index.html:198
+msgid "Podróżuj"
+msgstr "Reisen Sie"
+
+#: main/templates/main/index.html:199
+msgid "z nami"
+msgstr "mit uns"
+
+#: main/templates/main/index.html:202
+msgid ""
+" Działamy na rynku kołobrzeskim oraz w promieniu do 100 km\n"
+"              realizując przewozy gości w różnych kierunkach w Polsce,\n"
+"              Skandynawii, Niemczech i innych krajach Europy.\n"
+"              "
+msgstr ""
+"Wir sind auf dem Kołobrzeg-Markt und in einem Umkreis bis zu 100 km tätig "
+"und befördern Gäste in verschiedene Richtungen in Polen, Skandinavien, "
+"Deutschland und anderen europäischen Ländern."
+
+#: main/templates/main/index.html:242
+msgid "adres"
+msgstr "Adresse"
+
+#: main/templates/main/index.html:273
+msgid "Skontaktuj się z nami"
+msgstr "kontaktiere uns"
+
+#: main/templates/main/index.html:286
+msgid "IMIĘ I NAZWISKO"
+msgstr "NAME"
+
+#: main/templates/main/index.html:297
+msgid "NUMER TELEFONU"
+msgstr "TELEFONNUMMER"
+
+#: main/templates/main/index.html:304
+msgid "WYŚLIJ"
+msgstr "SENDEN"
+
+#: main/urls.py:9
+msgid "home/"
+msgstr ""
